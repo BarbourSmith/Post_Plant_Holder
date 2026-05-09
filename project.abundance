@@ -17,8 +17,8 @@
     },
     {
       "name": "Wood_Thickness",
-      "ioValue": 12,
-      "currentEquation": "12"
+      "ioValue": 18,
+      "currentEquation": "18"
     }
   ],
   "topLevel": true,
@@ -73,7 +73,7 @@
         },
         {
           "name": "Wood_Thickness",
-          "ioValue": 12
+          "ioValue": 18
         }
       ],
       "topLevel": false,
@@ -1006,7 +1006,7 @@
             },
             {
               "name": "height",
-              "ioValue": 12
+              "ioValue": 18
             }
           ]
         },
@@ -1196,7 +1196,7 @@
       "ioValues": [
         {
           "name": "Wood_Thickness",
-          "ioValue": 12
+          "ioValue": 18
         }
       ],
       "topLevel": false,
@@ -1473,7 +1473,7 @@
           "ioValues": [
             {
               "name": "x length",
-              "ioValue": 12
+              "ioValue": 18
             },
             {
               "name": "y length",
@@ -1903,7 +1903,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 6
+          "ioValue": 9
         }
       ]
     },
@@ -1916,7 +1916,7 @@
       "ioValues": [
         {
           "name": "T",
-          "ioValue": 12
+          "ioValue": 18
         }
       ],
       "currentEquation": "T/2"
@@ -2360,8 +2360,8 @@
     },
     {
       "atomType": "Gcode",
-      "x": 0.8796296296296297,
-      "y": 0.7186629526462396,
+      "x": 0.8855820105820106,
+      "y": 0.7688022284122563,
       "uniqueID": "id-536",
       "ioValues": [
         {
@@ -2375,8 +2375,8 @@
         },
         {
           "name": "Passes",
-          "ioValue": 3,
-          "currentEquation": "3"
+          "ioValue": 5,
+          "currentEquation": "5"
         },
         {
           "name": "Speed",
@@ -2384,7 +2384,7 @@
         },
         {
           "name": "Cut Through",
-          "ioValue": 0
+          "ioValue": 2
         },
         {
           "name": "Part Name",
