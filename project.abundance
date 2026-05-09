@@ -2321,8 +2321,8 @@
     },
     {
       "atomType": "Gcode",
-      "x": 0.8802910052910053,
-      "y": 0.7548746518105849,
+      "x": 0.8796296296296297,
+      "y": 0.7186629526462396,
       "uniqueID": "id-536",
       "ioValues": [
         {
@@ -2394,11 +2394,6 @@
       "ap2ID": "id-441"
     },
     {
-      "ap2Name": "Shape 1",
-      "ap1ID": "id-19",
-      "ap2ID": "id-251"
-    },
-    {
       "ap2Name": "input",
       "ap1ID": "id-19",
       "ap2ID": "id-461"
@@ -2442,6 +2437,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-455",
       "ap2ID": "id-536"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-461",
+      "ap2ID": "id-251"
     }
   ],
   "unitsKey": "MM",
