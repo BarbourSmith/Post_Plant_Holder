@@ -2701,11 +2701,6 @@
           ],
           "allConnectors": [
             {
-              "ap2Name": "number or geometry",
-              "ap1ID": "id-777",
-              "ap2ID": "id-775"
-            },
-            {
               "ap2Name": "Shape",
               "ap1ID": "id-777",
               "ap2ID": "id-804"
@@ -2736,11 +2731,15 @@
               "ap2ID": "id-804"
             },
             {
-              "ap2Name": "Selection",
-              "ap1ID": "id-864",
-              "ap2ID": "id-870"
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-870",
+              "ap2ID": "id-775"
             },
-            null
+            {
+              "ap2Name": "Selection",
+              "ap1ID": "id-941",
+              "ap2ID": "id-870"
+            }
           ],
           "fileTypeVersion": 1
         }
@@ -2928,8 +2927,8 @@
     },
     {
       "atomType": "ExtractTag",
-      "x": 0.742063492063492,
-      "y": 0.5933147632311978,
+      "x": 0.6937830687830687,
+      "y": 0.6183844011142061,
       "uniqueID": "id-455",
       "name": "Extract Tag",
       "ioValues": [
@@ -3351,8 +3350,8 @@
     },
     {
       "atomType": "Gcode",
-      "x": 0.8948412698412699,
-      "y": 0.7632311977715878,
+      "x": 0.8187830687830687,
+      "y": 0.6713091922005571,
       "uniqueID": "id-536",
       "ioValues": [
         {
@@ -3366,8 +3365,7 @@
         },
         {
           "name": "Passes",
-          "ioValue": 5,
-          "currentEquation": "5"
+          "ioValue": 5
         },
         {
           "name": "Speed",
@@ -3403,8 +3401,8 @@
     },
     {
       "atomType": "Export",
-      "x": 0.8664021164021163,
-      "y": 0.30919220055710306,
+      "x": 0.8683862433862434,
+      "y": 0.28969359331476324,
       "uniqueID": "id-555",
       "ioValues": [
         {
@@ -3433,8 +3431,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.6104497354497355,
-      "y": 0.8913649025069639,
+      "x": 0.6078042328042328,
+      "y": 0.9331476323119776,
       "uniqueID": "id-565",
       "name": "4 Layout",
       "ioValues": [
