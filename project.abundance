@@ -1938,8 +1938,8 @@
     },
     {
       "atomType": "ExtractTag",
-      "x": 0.7341269841269841,
-      "y": 0.7493036211699164,
+      "x": 0.742063492063492,
+      "y": 0.5933147632311978,
       "uniqueID": "id-455",
       "name": "Extract Tag",
       "ioValues": [
@@ -2361,8 +2361,8 @@
     },
     {
       "atomType": "Gcode",
-      "x": 0.8895502645502646,
-      "y": 0.7576601671309192,
+      "x": 0.8948412698412699,
+      "y": 0.7632311977715878,
       "uniqueID": "id-536",
       "ioValues": [
         {
@@ -2534,8 +2534,8 @@
         },
         {
           "atomType": "Assembly",
-          "x": 0.7003968253968255,
-          "y": 0.6713091922005571,
+          "x": 0.5747354497354497,
+          "y": 0.7019498607242339,
           "uniqueID": "id-687",
           "ioValues": [
             {
@@ -2544,10 +2544,6 @@
             },
             {
               "name": "Shape 2",
-              "ioValue": null
-            },
-            {
-              "name": "Shape 3",
               "ioValue": null
             },
             {
@@ -2597,7 +2593,8 @@
             },
             {
               "name": "xDist",
-              "ioValue": -142
+              "ioValue": -175,
+              "currentEquation": "-175"
             },
             {
               "name": "yDist",
@@ -2611,8 +2608,8 @@
         },
         {
           "atomType": "Extrude",
-          "x": 0.5337301587301587,
-          "y": 0.6434540389972144,
+          "x": 0.6177248677248677,
+          "y": 0.17827298050139276,
           "uniqueID": "id-704",
           "ioValues": [
             {
@@ -2674,6 +2671,211 @@
               "ioValue": 0
             }
           ]
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.8452380952380952,
+          "y": 0.36211699164345407,
+          "uniqueID": "id-723",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 2",
+              "ioValue": null
+            }
+          ]
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "x": 0.6236772486772487,
+          "y": 0.48467966573816157,
+          "uniqueID": "id-739",
+          "name": "Center_XY",
+          "ioValues": [
+            {
+              "name": "Geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ],
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "id-733",
+              "ioValues": [
+                {
+                  "name": "number or geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ]
+            },
+            {
+              "atomType": "Code",
+              "x": 0.42791005291005285,
+              "y": 0.2785515320334262,
+              "uniqueID": "id-734",
+              "ioValues": [
+                {
+                  "name": "A",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                }
+              ],
+              "interpreterVersion": 0,
+              "code": "/**\n Inputs for this Code Atom:\n - Takes a single geometry input \"A\" and recenters it in the XY plane based on its bounding box.\n*/\nInputs = [\n  { inputName: \"A\", type: \"geometry\", defaultValue: null }\n]\n\nif (!A) {\n  // Nothing to do if no input provided\n  return null\n}\n\n// Get bounding box of A\nlet boundsA = await GetBounds(A);\n// boundsA.min and boundsA.max are arrays [x,y,z]\nlet min = boundsA.min\nlet max = boundsA.max\n\n// Compute the center of the bounding box in X and Y\nlet centerX = (min[0] + max[0]) / 2.0\nlet centerY = (min[1] + max[1]) / 2.0\n\n// Translation to move the bounding box center to the origin (0,0) in XY,\n// leaving Z unchanged.\nlet translationX = -centerX\nlet translationY = -centerY\nlet translationZ = 0\n\n// Move the shape. Move takes the input ID and translations (x,y,z)\nlet movedOutput = await Move(A, translationX, translationY, translationZ)\n\n// Return the moved shape. Move typically returns a replicad object suitable for return.\nreturn movedOutput"
+            },
+            {
+              "atomType": "Rectangle",
+              "x": 0.1798941798941799,
+              "y": 0.6044568245125348,
+              "uniqueID": "id-735",
+              "ioValues": [
+                {
+                  "name": "x length",
+                  "ioValue": 10
+                },
+                {
+                  "name": "y length",
+                  "ioValue": 10
+                }
+              ]
+            },
+            {
+              "atomType": "Extrude",
+              "x": 0.2798941798941799,
+              "y": 0.6044568245125348,
+              "uniqueID": "id-736",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "height",
+                  "ioValue": 10
+                }
+              ]
+            },
+            {
+              "atomType": "Move",
+              "x": 0.46891534391534395,
+              "y": 0.6211699164345404,
+              "uniqueID": "id-737",
+              "ioValues": [
+                {
+                  "name": "geometry",
+                  "ioValue": "__GEOMETRY_INPUT__"
+                },
+                {
+                  "name": "xDist",
+                  "ioValue": 50
+                },
+                {
+                  "name": "yDist",
+                  "ioValue": 30
+                },
+                {
+                  "name": "zDist",
+                  "ioValue": 0
+                }
+              ]
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.15384615384615385,
+              "uniqueID": "id-738",
+              "name": "Geometry",
+              "type": "geometry"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-734",
+              "ap2ID": "id-733"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-735",
+              "ap2ID": "id-736"
+            },
+            {
+              "ap2Name": "geometry",
+              "ap1ID": "id-736",
+              "ap2ID": "id-737"
+            },
+            {
+              "ap2Name": "A",
+              "ap1ID": "id-738",
+              "ap2ID": "id-734"
+            }
+          ],
+          "parentRepo": {
+            "lastFoundGit": "2026-05-09T18:23:39.261Z",
+            "privateRepo": false,
+            "repoName": "Center_XY",
+            "dateCreated": "2025-12-04T19:44:27Z",
+            "likes": 0,
+            "readMe": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/README.md?sanitize=true",
+            "yyyy": 2025,
+            "topMoleculeID": "id-64",
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/BarbourSmith/Center_XY",
+            "topics": [],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739589",
+            "ranking": 9,
+            "searchField": "center_xy barboursmith this takes an input shape and moves it to be centered on the xy plane ",
+            "owner": "BarbourSmith",
+            "description": "This takes an input shape and moves it to be centered on the XY plane",
+            "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Center_XY/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "MM",
+          "fileTypeVersion": 1,
+          "lastReloadedFromGithubAt": 1778352224586
+        },
+        {
+          "atomType": "Gcode",
+          "x": 0.7301587301587301,
+          "y": 0.7325905292479109,
+          "uniqueID": "id-759",
+          "ioValues": [
+            {
+              "name": "geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "Tool Size",
+              "ioValue": 6.35
+            },
+            {
+              "name": "Passes",
+              "ioValue": 1
+            },
+            {
+              "name": "Speed",
+              "ioValue": 1500
+            },
+            {
+              "name": "Cut Through",
+              "ioValue": 0
+            },
+            {
+              "name": "Part Name",
+              "ioValue": "4 Layout",
+              "currentEquation": "4 Layout"
+            }
+          ],
+          "partName": "4 Layout",
+          "sortDirection": "Left"
         }
       ],
       "allConnectors": [
@@ -2713,9 +2915,9 @@
           "ap2ID": "id-687"
         },
         {
-          "ap2Name": "number or geometry",
+          "ap2Name": "Geometry",
           "ap1ID": "id-687",
-          "ap2ID": "id-567"
+          "ap2ID": "id-739"
         },
         {
           "ap2Name": "geometry",
@@ -2728,9 +2930,9 @@
           "ap2ID": "id-687"
         },
         {
-          "ap2Name": "Shape 3",
+          "ap2Name": "Shape 2",
           "ap1ID": "id-704",
-          "ap2ID": "id-687"
+          "ap2ID": "id-723"
         },
         {
           "ap2Name": "geometry",
@@ -2741,9 +2943,54 @@
           "ap2Name": "Shape 5",
           "ap1ID": "id-716",
           "ap2ID": "id-687"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-739",
+          "ap2ID": "id-723"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-739",
+          "ap2ID": "id-567"
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Gcode",
+      "x": 0.7308201058201058,
+      "y": 0.8746518105849581,
+      "uniqueID": "id-766",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Tool Size",
+          "ioValue": 3.125
+        },
+        {
+          "name": "Passes",
+          "ioValue": 5
+        },
+        {
+          "name": "Speed",
+          "ioValue": 1500
+        },
+        {
+          "name": "Cut Through",
+          "ioValue": 2
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Post_Plant_Holder",
+          "currentEquation": "Post_Plant_Holder"
+        }
+      ],
+      "partName": "Post_Plant_Holder",
+      "sortDirection": "Top"
     }
   ],
   "allConnectors": [
@@ -2846,6 +3093,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-552",
       "ap2ID": "id-555"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-565",
+      "ap2ID": "id-766"
     }
   ],
   "unitsKey": "MM",
