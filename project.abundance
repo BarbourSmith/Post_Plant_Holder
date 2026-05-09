@@ -1300,8 +1300,8 @@
         },
         {
           "atomType": "Move",
-          "x": 0.32605820105820105,
-          "y": 0.3565459610027855,
+          "x": 0.32671957671957674,
+          "y": 0.3593314763231198,
           "uniqueID": "id-280",
           "ioValues": [
             {
@@ -1318,8 +1318,8 @@
             },
             {
               "name": "zDist",
-              "ioValue": 20,
-              "currentEquation": "20"
+              "ioValue": 35,
+              "currentEquation": "35"
             }
           ]
         },
@@ -1350,7 +1350,7 @@
                   "origin": [
                     0,
                     0,
-                    20
+                    35
                   ],
                   "xDir": [
                     1,
@@ -1404,14 +1404,14 @@
         },
         {
           "atomType": "Fusion",
-          "x": 0.5337301587301587,
-          "y": 0.7353760445682451,
+          "x": 0.5615079365079365,
+          "y": 0.5877437325905293,
           "uniqueID": "id-291",
           "ioValues": [
             {
               "name": "Shape 1",
               "ioValue": {
-                "geometry": "loft-move-rectangle-20-20-0-0-0-move-rectangle-100-20-0-0-0-{\"origin\":[0,0,20],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}",
+                "geometry": "loft-move-rectangle-20-20-0-0-0-move-rectangle-100-20-0-0-0-{\"origin\":[0,0,35],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-{\"origin\":[0,0,5],\"xDir\":[1,0,0],\"normal\":[0,0,1]}",
                 "dimension": "3D",
                 "tags": [],
                 "plane": {
@@ -1501,8 +1501,8 @@
         },
         {
           "atomType": "Move",
-          "x": 0.5952380952380952,
-          "y": 0.17827298050139276,
+          "x": 0.5965608465608465,
+          "y": 0.18662952646239553,
           "uniqueID": "id-304",
           "ioValues": [
             {
@@ -1519,7 +1519,8 @@
             },
             {
               "name": "zDist",
-              "ioValue": 12
+              "ioValue": 15,
+              "currentEquation": "15"
             }
           ]
         },
